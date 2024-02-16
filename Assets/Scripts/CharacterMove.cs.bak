@@ -46,7 +46,7 @@ public class CharacterMove : MonoBehaviour
             }
             if (isRunning == false)
             {
-                verticalMove = Input.GetAxis("Vertical") * Time.deltaTime * 1.5f;
+                verticalMove = Input.GetAxis("Vertical") * Time.deltaTime * 2.5f;
             }
             if (isRunning == true && backwardsCheck == false)
             {
