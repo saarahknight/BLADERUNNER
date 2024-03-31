@@ -14,6 +14,10 @@ public class CharacterMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.U))
+        {
+            print("Hello World");
+        }
         if (Input.GetKey(KeyCode.LeftShift))
         {
             isRunning = true;
@@ -29,18 +33,18 @@ public class CharacterMove : MonoBehaviour
             if (Input.GetButton("SKey"))
             {
                 backwardsCheck = true;
-                thePlayer.GetComponent<Animator>().Play("WalkingBackwards");
+                thePlayer.GetComponent<Animator>().Play("");
             }
             else
             {
                 backwardsCheck = false;
                 if (isRunning == false)
                 {
-                    thePlayer.GetComponent<Animator>().Play("SneakWalk");
+                    thePlayer.GetComponent<Animator>().Play("");
                 }
                 else
                 {
-                    thePlayer.GetComponent<Animator>().Play("Running");
+                    thePlayer.GetComponent<Animator>().Play("");
                 }
 
             }
@@ -60,7 +64,8 @@ public class CharacterMove : MonoBehaviour
         else
         {
             isMoving = false;
-            thePlayer.GetComponent<Animator>().Play("Idle");
+            thePlayer.GetComponent<Animator>().Play("");
         }
     }
+
 }
